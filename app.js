@@ -20,6 +20,7 @@ app.use(cors(corsOptions));
 
 //load routes
 const products = require('./Router/productRouter');
+const login = require('./Router/loginRouter');
 
 //use BodyParser middleware
 app.use(bodyParser.json());
@@ -27,7 +28,7 @@ app.use(bodyParser.json());
 
 //Use routes
 app.use('/products', products);
-
+app.use('/login', login);
 
 
 
